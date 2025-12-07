@@ -1,12 +1,18 @@
-// App.js
 import React from 'react';
-import { SQLiteProvider } from 'expo-sqlite';
-import ExpenseScreen from './ExpenseScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ExpenseScreen from './ExpenseScreen'; 
+import ChartScreen from './ChartScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SQLiteProvider databaseName="expenses.db">
-      <ExpenseScreen />
-    </SQLiteProvider>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Expenses" component={ExpenseScreen} />
+        <Stack.Screen name="Chart" component={ChartScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
