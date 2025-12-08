@@ -425,3 +425,19 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
 });
+
+
+<TouchableOpacity
+  style={{
+    backgroundColor: '#4CAF50',
+    padding: 12,
+    borderRadius: 8,
+    marginVertical: 12,
+  }}
+  onPress={() => navigation.navigate('Chart')}
+>
+  <Text style={{ color: 'white', textAlign: 'center', fontWeight: '600' }}>
+    View Analytics
+  </Text>
+</TouchableOpacity>
+
